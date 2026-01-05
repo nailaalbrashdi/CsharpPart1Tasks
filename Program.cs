@@ -9,6 +9,7 @@
             Console.WriteLine("1.Find the Average");
             Console.WriteLine("2.Check if a Number is Even or Odd");
             Console.WriteLine("3.Find the Smallest Number in a List");
+            Console.WriteLine("4.Count Positive and Negative Numbers");
 
 
 
@@ -64,10 +65,33 @@
             Console.WriteLine("The smallest number is: " + smallest);
 
 
+            Console.WriteLine("How many numbers you need:");
+            int n2 = int.Parse(Console.ReadLine());
 
+            int positiveCount = 0;
+            int negativeCount = 0;
 
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("Enter number " + (i + 1) + ": ");
+                int num = int.Parse(Console.ReadLine());
 
+                if (num > 0)
+                {
+                    positiveCount++;
+                }
+                else if (num < 0)
+                {
+                    negativeCount++;
+                }
+                // Zero is ignored
+            }
+
+            Console.WriteLine("Positive numbers: " + positiveCount);
+            Console.WriteLine("Negative numbers: " + negativeCount);
         }
 
+
     }
-}
+    }
+
